@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Admin_LTE</title>
+
+    <partial name="_StylesPartial" />
+</head>
+<body class="hold-transition sidebar-mini" id="bodyContainer">
+    <div class="wrapper">
+
+        <partial name="_TopNavigationPartial" />
+        <partial name="_MainNavigationPartial" />
+
+
+
+        <div class="content-wrapper">
+            <div class="content">
+                <div class="container-fluid">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+
+        <partial name="_SidebarPartial" />
+        <partial name="_FooterPartial" />
+
+
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+       <partial name="_ScriptsPartial" />
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
